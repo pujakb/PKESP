@@ -1,0 +1,2 @@
+[webserver]
+host1 ansible_ssh_host=10.0.2.15 ansible_ssh_user=webadmin 
