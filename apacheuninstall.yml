@@ -1,19 +1,19 @@
-- hosts: webserver 
+---
+- hosts: webserver
   sudo: yes
 
   vars:
-    http_port: 80
 
   tasks:
-    
-   - name: delete html file
-       file:
-         path:  /var/www/html/EntSWPPlatforms
-         state: absent
 
-   - name: uninstall apache
-         apt:
-            name: apache2
-            state: absent
-            update_cache: yes
-            purge: yes
+  - name: delete html file 
+    file:
+      path: /var/ww/html/EntSWPlatforms
+      state: absent
+
+  - name: uninstall apache
+    apt:
+      name: apache2
+      state: absent
+      update_cache: yes
+      purge: yes
